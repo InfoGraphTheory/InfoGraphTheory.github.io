@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Info Triple</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Faux Columns -->
+  <div id="faux">
+    <!-- Begin Left Column -->
+    <div id="leftcolumn">Terminology
+
+
+<hr />
+<div id="menu">
+  <ul>
+    <li><a href="infograph.html">Info Graph</a></li>
+    <li><a href="infotriple.html">Info Triple</a></li>
+    <li><a href="infotable.html">Info Table</a></li>
+    <li><a href="microapplications.html">Micro Applications</a></li>
+    <li><a href="microprotocols.html">Micro Protocols</a></li>
+    <li><a href="morphablemodel.html">Morphable Model</a></li>
+  </ul>
+</div>
+  </div>
+    <!-- End Left Column -->
+    <!-- Begin Right Column -->
+    <div id="rightcolumn">
+      <h1>
+Micro Protocol
+      </h1>
+      <br/>
+
+In the simplest form an ID representing "this is spam" can be seen as a micro protocol where all triples referring to this ID states that the other ID in the triple is spam.
+      <br/>
+      <br/>
+Typically we would want to be able to regret out tags, so in similar fashion a micro protocol for canceling triples can be made where an arbitrary ID represents the concept of "this triple has been canceled".
+
+      <br/>
+      <br/>
+
+Now we can let our spam protocol implement these two rules/micro protocols and we have a spam micro protocol where the spam tag can be canceled.
+
+      <br/>
+      <br/>
+This would work fine for a single application. If we want other app developers to discover our protocol we can make a micro protocol for that as well.
+
+      <br/>
+      <br/>
+      <br/>
+<h1>
+Micro Protocol Protocol
+</h1>
+
+      <br/>
+Say we select an ID for tagging IDs as "this is a micro protocol".
+Every Info Triple having this ID in it means that the other ID represents a micro protocol.
+
+      <br/>
+      <br/>
+Now we make a new ID to represent our spam protocol and we tag it as being a micro protocol using the tag above.
+
+      <br/>
+      <br/>
+We then make a triple from the "this is spam" ID to our protocol ID. 
+      <br/>
+Then we make a triple from the "this triple has been canceled" to our protocol ID.
+
+      <br/>
+      <br/>
+We then decide on an ID for tagging IDs as "this is a part of a micro protocol".
+      <br/>
+Lastly we tag the two triple IDs just created to our spam protocol ID as being part of the micro protocol.
+
+      <br/>
+      <br/>
+Now other developers can search and find our micro protocol and see the sub parts of the protocol.
+
+      <br/>
+      <br/>
+      <br/>
+<h1>
+Micro Protocol Documentation
+</h1>
+
+      <br/>
+In order to help other developers understand our protocol, we can write Descriptor Notes for each of our term IDs and for each of the triple IDs we created while creating the protocol. 
+
+      <br/>
+      <br/>
+In future more advanced protocols the details of how to implement the protocol may be expressed with Info Triples as well and hence apps for the protocol will be auto generated.
+      <br/>
+For now we will have to do with Descriptor Notes to direct human developers in the right direction.
+
+      <br/>
+      <br/>
+      More information on Descriptor Notes can be found <a href="https://descriptor-note.surge.sh">here</a>
+
+      <br/>
+      <br/>
+
+
+      <div class="clear"> </div>
+    </div>
+    <!-- End Right Column -->
+    <div class="clear"> </div>
+  </div>
+  <!-- End Faux Columns -->
+ </div>
+<!-- End Wrapper -->
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The Info Triple</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Faux Columns -->
+  <div id="faux">
+    <!-- Begin Left Column -->
+    <div id="leftcolumn">Terminology
+
+
+<hr />
+<div id="menu">
+  <ul>
+    <li><a href="infograph.html">Info Graph</a></li>
+    <li><a href="infotriple.html">Info Triple</a></li>
+    <li><a href="infotable.html">Info Table</a></li>
+    <li><a href="microapplications.html">Micro Applications</a></li>
+    <li><a href="microprotocols.html">Micro Protocols</a></li>
+    <li><a href="morphablemodel.html">Morphable Model</a></li>
+  </ul>
+</div>
+  </div>
+    <!-- End Left Column -->
+    <!-- Begin Right Column -->
+    <div id="rightcolumn">
+
+      <h1>Applications</h1>
+      <br/>
+
+As all information in theoretically can be expressed with Info Triples, this section is merely showing some how-to examples for explaining the concepts to newcomers. 
+      <br/>
+      <br/>
+
+<b>Decorating</b>
+      <br/>
+A single Info Triple carries only one atomic piece of information, namely that a relationship exists between two objects.
+Luckily we can add more information by referring to its triple ID from other Info Triples, and we can add extra information this way indefinitely.
+
+      <br/>
+      <br/>
+From the old school Object Oriented perspective this practice can be compared to the Decorator Design Pattern.
+      <br/>
+In more recent lingo it's been popularized to think in terms of tagging and as such that term can be used as well.
+
+      <br/>
+      <br/>
+In the following some "pseudo code" examples we use readable names for empty edges and r1, r2,.. to represent Info Triple IDs. 
+
+      <br/>
+      <br/>
+First we see a simple tagging of some message as being spam:
+      <br/>
+      <br/>
+r1 some_message is_spam
+
+      <br/>
+      <br/>
+Secondly we see how we first create a relationship that we want to decorate and then tag it:
+      <br/>
+      <br/>
+r1 Alice Bob
+      <br/>
+r2 r1 are_friends
+
+      <br/>
+      <br/>
+So Alice and Bob have a relationship and our description of that relationship is that they are friends.
+
+
+      <br/>
+      <br/>
+
+<b>Morphing</b>
+      <br/>
+A feature of the Info Triple is the ability to add edges to the model indefinitely in a uniform way.
+
+      <br/>
+      <br/>
+It becomes handy when we feel like changing a data structure over time as we get wiser.
+
+      <br/>
+      <br/>
+Following are a couple of examples of a data model that we morph into a new shape while having the ability to keep the history for auditing.
+
+      <br/>
+      <br/>
+First example we cancel a triple we found was incorrect.
+      <br/>
+In this case we have marked a message a spam, but decided that the message was alright after all:
+
+      <br/>
+      <br/>
+r1 some_message is_spam
+      <br/>
+r2 r1 is_canceled
+
+      <br/>
+      <br/>
+This means that applications can now ignore the first "this is spam" triple as they find the second triple have canceled the first one.
+
+      <br/>
+      <br/>
+In the second example we modify a relationship as things have changed.
+      <br/>
+Here, the relationship between Alice and Bob has gone from friendship to a romantic relationship:
+
+      <br/>
+      <br/>
+r1 Alice Bob
+      <br/>
+r2 r1 are_friends
+      <br/>
+r3 r2 is_canceled
+      <br/>
+r4 r1 are_lovers
+
+      <br/>
+      <br/>
+We cancel the first tag of the Alice-Bob relationship and replaced it with a new one stating that Alice and Bob are lovers.
+
+      <br/>
+      <br/>
+
+<b>Structuring</b>
+      <br/>
+Building more complex data structures is going to be very valuable for creating apps interoperability and auto generated content as well as for making data useful for future AI applications.
+
+      <br/>
+      <br/>
+In the following we'll see the meta data for a data structure can be made.
+      <br/>
+We shall see a simple example of a food recipe where we add the ingredients:
+
+      <br/>
+      <br/>
+r1 some_text is_a_food_recipe
+      <br/>
+r2 r1 contains_tomato
+      <br/>
+r3 r1 contains_olive_oil
+      <br/>
+r4 r1 contains_salt
+      <br/>
+      <br/>
+
+Notice that we do not add the ingredient to the ID of the food recipe text, but to the triple ID of the relationship between the food recipe text and the concept of being a food recipe.
+      <br/>
+Thereby when examine the triple tags as containing tomato we get that we are talking about the text in context of being a food recipe.  
+
+      <br/>
+      <div class="clear"> </div>
+    </div>
+    <!-- End Right Column -->
+    <div class="clear"> </div>
+  </div>
+  <!-- End Faux Columns -->
+ </div>
+<!-- End Wrapper -->
+</body>
+</html>

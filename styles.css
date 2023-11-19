@@ -32,12 +32,6 @@ body {
  position: relative;
 }
 .clear { clear: both; background: none; }
-body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 80%;
-	font-weight: bold;
-	background: #FFF;
-	}
 
 h1 {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
